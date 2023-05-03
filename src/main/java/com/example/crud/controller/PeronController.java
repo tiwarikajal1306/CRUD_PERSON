@@ -21,4 +21,9 @@ public class PeronController {
     public PersonDTO savePersonDetails(@RequestBody PersonDTO personDTO){
         return personService.savePerson(personDTO);
     }
+
+    @GetMapping("/ping")
+    public String getPersonDetails(){
+        return "Service is on";
+    }
 }
